@@ -35,7 +35,12 @@ public class WordCountSLOW{
 			}
 		}
 		long total_time = System.currentTimeMillis() - start_time;
-		System.out.println(total_time);
+		PrintWriter writer = new PrintWriter("total_time_wcSlow.txt", "UTF-8");
+		PrintWriter out_put = new PrintWriter("out_put_wcSlow.txt", "UTF-8");
+		writer.println(total_time);
+		writer.close();
+		out_put.println(word_count);
+        out_put.close();
 	}
 
 }
